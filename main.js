@@ -234,7 +234,7 @@ function searchitems(value) {
     let table = "";
     if (searchmood == "title") {
         for (let i = 0; i < datapro.length; i++) {
-            if (datapro[i].title.includes(value)) {
+            if (datapro[i].title.includes(value.toLowerCase())) {
                 table += `  <tr>
                 <th>${i + 1}</th>
                 <th>${datapro[i].title}</th>
@@ -253,7 +253,7 @@ function searchitems(value) {
 
     } else {
         for (let i = 0; i < datapro.length; i++) {
-            if (datapro[i].category.includes(value)) {
+            if (datapro[i].category.includes(value.toLowerCase())) {
                 table += `  <tr>
                 <th>${i + 1}</th>
                 <th>${datapro[i].title}</th>
