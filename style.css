@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.form-control:focus {
+    color: none;
+    background-color: rgb(241, 204, 204);
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+    border: none;
+}
+
+input:focus {
+    transform: scale(1.05);
+}
+
+#total {
+    background-color: #dc3545;
+    padding: 8px 50px;
+    border-radius: 5%;
+    color: white;
+    transition: .5s;
+}
+
+#total:hover {
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+    letter-spacing: 1px;
+}
+
+#total::before {
+    content: "Total:";
+
+}
+
+.btn-danger {
+    transition: .5s;
+}
+
+.btn-danger:hover {
+    letter-spacing: 1px;
+}
+
+
+

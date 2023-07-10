@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cruds</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="madia-query.css">
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="crud container ">
+
+        <!-- head -->
+        <div class=" text-center mt-3   head">
+            <h1>cruds</h1>
+            <p class="h4 text-danger my-3 ">Create read update delete search </p>
+        </div>
+        <!-- head -->
+
+        <!-- inputs -->
+        <form>
+            <div class="inputs  p-3 py-0 ">
+
+                <input type="text" class="form-control rounded" id="title" required placeholder="title">
+
+                <div class="price d-lg-flex d-block my-3  ">
+                    <input type="number" onkeyup="gettotal()" class="rounded form-control" id="price" required
+                        placeholder="price">
+                    <input type="number" onkeyup="gettotal()"
+                        class=" mx-lg-2 my-lg-0 my-xl-0 my-3  rounded form-control" required id="taxes"
+                        placeholder="taxes">
+                    <input type="number" onkeyup="gettotal()" class=" mx-lg-2 my-lg-0 my-xl-0 my-3 rounded form-control"
+                        id="ads" placeholder="ads">
+                    <input type="number" onkeyup="gettotal()"
+                        class=" mx-lg-2  my-lg-0 my-xl-0 my-3 rounded form-control" id="discount"
+                        placeholder="discount">
+                    <small id="total"></small>
+                </div>
+                <div>
+                    <input type="number" class="form-control my-2 rounded " required id="count" placeholder="count">
+                    <input type="text" class="form-control my-2 rounded" required id="category" placeholder="category">
+                    <button type="button" id="submit" class="btn btn-danger my-2 rounded w-100 pointer-event "
+                        onclick="createitem()">Create</button>
+                </div>
+            </div>
+        </form>
+        <!-- inputs -->
+
+        <!-- outputs -->
+        <div class="outputs p-3  py-0">
+
+            <div class="searchblock">
+                <input type="text" onkeyup="searchitems(this.value)" placeholder="Choose how you want to search (Title or Category)
+                " id="search" class="form-control">
+            </div>
+            <div class="btn-search mt-3 d-flex justify-content-around">
+                <button class="btn btn-danger w-50 me-3 rounded" onclick="searchmoodtype(this.id)"
+                    id="searchtitle">search by title</button>
+                <button class="btn btn-danger w-50 ms-3 rounded" onclick="searchmoodtype(this.id)"
+                    id="searchcategory">search by category</button>
+            </div>
+        </div>
+        <!-- outputs -->
+
+
+        <div class="p-3" id="deleteall">
+            <button class="btn btn-danger w-100">Delete All</button>
+        </div>
+        <table class="my-4 table-media   table-bordered table text-center ">
+            <tr class="table-danger">
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>texes</th>
+                <th>ads</th>
+                <th>dicsount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+    
+            <tbody id="tbody">
+    
+            </tbody>
+        </table>
+
+    </div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
